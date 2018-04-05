@@ -21,6 +21,23 @@ namespace Algorithms
             Assert.AreEqual(expected, actual);
         }
 
+        [TestMethod]
+
+        public void TestReverseString()
+        {
+            // arrange
+            var text = "Hello";
+            var expected = "olleH";
+
+            // act
+            var actual = Program.ReverseString(text);
+
+            // assert
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+
         public void TestRecursiveFactorial()
         {
             // arrange

@@ -23,6 +23,16 @@ namespace Algorithms
             return startingAt * RecursiveFactorial(startingAt - 1);
         }
 
+        public static String ReverseString(String text)
+        {
+            if (String.IsNullOrEmpty(text))
+            {
+                return text;
+            }
+
+            return text[text.Count() - 1] + ReverseString(text.Substring(0, text.Count() - 1));
+        }
+
         public static int LargestTwoElementConsecutiveSum(List<int> list)
         {
             if (list == null || list.Count == 0)
