@@ -51,6 +51,35 @@ namespace Algorithms
         }
 
         [TestMethod]
+        public void TestRecursivePower()
+        {
+            // arrange
+            var x = 2;
+            var y = 3;
+            var expected = 8;
+
+            // act
+            var actual = Program.XToTheYPower(x, y);
+
+            // assert
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void TestMultiplyList()
+        {
+            // arrange
+            var list = new List<int> { 1, 2, 3, 4 };
+            var expected = 1 * 2 * 3 * 4;
+
+            // act
+            var actual = Program.MultiplyList(list);
+
+            // assert
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
         public void TestRecursiveFactorial()
         {
             // arrange

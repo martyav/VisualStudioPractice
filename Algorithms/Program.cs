@@ -48,6 +48,38 @@ namespace Algorithms
             return max + GetSum(min, max - 1);
         }
 
+        public static int XToTheYPower(int x, int y)
+        {
+            if (y == 0)
+            {
+                return 1;
+            }
+
+            if (y == 1)
+            {
+                return x;
+            }
+
+            return x * XToTheYPower(x, y - 1);
+        }
+
+        public static int MultiplyList(List<int> list)
+        {
+            if (list == null || list.Count == 0)
+            {
+                return 1;
+            }
+
+            if (list.Count == 1)
+            {
+                return list[0];
+            }
+
+            var division = (list.Count / 2);
+
+            return MultiplyList(list.Take(division).ToList()) * MultiplyList(list.Skip(division).ToList());
+        }
+
         public static int LargestTwoElementConsecutiveSum(List<int> list)
         {
             if (list == null || list.Count == 0)
