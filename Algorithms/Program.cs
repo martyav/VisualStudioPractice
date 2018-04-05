@@ -13,6 +13,16 @@ namespace Algorithms
 
         }
 
+        public static int RecursiveFactorial(int startingAt)
+        {
+            if (startingAt == 0)
+            {
+                return 1;
+            }
+
+            return startingAt * RecursiveFactorial(startingAt - 1);
+        }
+
         public static int LargestTwoElementConsecutiveSum(List<int> list)
         {
             if (list == null || list.Count == 0)
