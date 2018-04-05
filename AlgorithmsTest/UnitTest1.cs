@@ -22,7 +22,6 @@ namespace Algorithms
         }
 
         [TestMethod]
-
         public void TestReverseString()
         {
             // arrange
@@ -37,7 +36,21 @@ namespace Algorithms
         }
 
         [TestMethod]
+        public void TestGetSum()
+        {
+            // arrange
+            var min = 0;
+            var max = 5;
+            var expected = 1 + 2 + 3 + 4 + 5;
 
+            // act 
+            var actual = Program.GetSum(min, max);
+
+            // assert
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
         public void TestRecursiveFactorial()
         {
             // arrange

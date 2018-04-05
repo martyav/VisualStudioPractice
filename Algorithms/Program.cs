@@ -33,6 +33,21 @@ namespace Algorithms
             return text[text.Count() - 1] + ReverseString(text.Substring(0, text.Count() - 1));
         }
 
+        public static int GetSum(int min, int max)
+        {
+            if (max == min)
+            {
+                return min;
+            }
+
+            if (max < min)
+            {
+                return 0;
+            }
+
+            return max + GetSum(min, max - 1);
+        }
+
         public static int LargestTwoElementConsecutiveSum(List<int> list)
         {
             if (list == null || list.Count == 0)
